@@ -34,7 +34,7 @@ We are delighted to start working with you and we would like you to do some task
 
 | Price by unit | Product         |
 |---------------|---------------- |
-| 10.00 $       | Chicken Burger |
+| 10.00 $       | Chicken Burger  |
 | 9.00 $        | Chicken Wings   |
 | 12.00 $       | French Fries    |
 | 8.00 $        | Fried Chicken   |

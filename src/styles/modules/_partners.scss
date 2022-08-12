@@ -1,0 +1,50 @@
+// PARTNERS
+.partners {
+    text-align: center;
+    background-color: #479cd5db;
+    padding: 2rem 3rem;
+
+    .title {
+        margin-bottom: 0;
+        padding: 0.5rem;
+        box-shadow: 0 29px 0 -23px $main_yellow;
+        display: inline-block;
+        transform: skewY(-1deg);
+    }
+
+    h3 {
+        color: $main-white;
+        font-size: 2rem;
+        transform: skewY(-1deg);
+    }
+
+
+    // Logos container
+    .logos-cont {
+        display: inline-block;
+        margin: 2rem 0;
+
+        img {
+            margin: 1rem;
+        }
+    }
+
+}
+
+// MEDIA QUERIES
+
+@media (max-width:750px) {
+
+    .partners {
+
+        .logos-cont {
+            margin: 1rem;
+
+            // Images
+            img {
+                max-width: 200px;
+                margin: 0px;
+            }
+        }
+    }
+}

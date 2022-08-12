@@ -4,4 +4,32 @@
 /****************************************************************
           ERASE THIS IMPORT BEFORE STARTING YOUR CHALLENGE 
 *****************************************************************/
-@import 'start-ERASE-ME';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+h1,
+h2,
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button,
+a {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.3em;
+}

@@ -1,51 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Los Pollos Hermanos</title>
-  </head>
-  <body>
 
-  <section class="erasable-container">
-    <header>
-      <div class="logo-container">
-        <img class="logo" src="src/assets/images/general/fever-logo.svg" alt="">
-        <span>Code Challenge</span>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Los Pollos Hermanos</title>
+</head>
+
+<body>
+  <!-- NAVIGATION -->
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="#"><img class="logo" src="/src/assets/images/header/lph-logo.png" alt="logo"></a>
+          <span class="title">Los Pollos Hermanos</span>
+        </div>
       </div>
-    </header>
-    <div class="main-content">
-      <h1 class="welcome">Welcome to the Landings Squad's<br>Fever Code Challenge</h1>
-      <p>
-        Before you start, make sure you have read these files carefully and in the following order:
-      </p>
-      <ol>
-        <li>README.md</li>
-        <li>PRD.pdf</li>
-      </ol>
-      <p>They explain how this project works and what the test will consist of.
-      As you navigate through the different files you will find two types of messages:
-        </p>
-      <ul>
-        <li><strong>Informative messages</strong> that will inform you which areas of the project can be edited and which cannot. You can see them at the top of the files, if there is no message indicating it, it can be edited. (this does not mean that it should be done).</li>
-        <br>
-        <li><strong>Code Hints</strong> that will give you useful advice during the development of your test.</li>
-      </ul>
-      <p>Inside <code>package.json</code> you can find the only three commands you will need to do this test.</p>
-      <ul>
-        <li>"dev" will open a development environment where you can see the changes you make in real time.</li>
-        <br>
-        <li>"build" will compile what you've built and generate a dist folder with your final web page.</li>
-        <br>
-        <li>"preview" will allow you to view that dist folder as if it were a real production environment.</li>
-      </ul>
-      <p>When you submit your test, we'll use that last command to generate your static web page and test you, so it's important to make sure everything is working properly.</p>
-      <p>Good luck! &#128578;</p>
+      <!-- Responsive Nav Button -->
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <!-- Nav Links -->
+      <div class="nav-links">
+        <a href="#"><i class="fa-solid fa-info"></i>Info</a>
+        <a href="#menu"><i class="fa-solid fa-receipt fa-sm"></i> Menu</a>
+        <a href="#location"><i class="fa-solid fa-location-dot"></i> Location</a>
+      </div>
     </div>
-</section>
+  </header>
 
-    <!-- Do not edit below this line -->
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <!-- HERO BANNER -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Order fried <mark class="mark-hero">Chicken</mark> Now</h1>
+        <p>
+          Get famous chicken however <span><b><mark class="mark-hero">YOU WANT IT.</mark></b></span>
+        </p>
+        <a href="#menu" class="hero-btn">Order now...</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="menu">
+    <h1 class="title">Menu</h1>
+    <p class="desc">Menu varies by <b>location.</b> Please contact your local restaurant to verify <b>menu
+        availability.</b></p>
+    <!-- PRODUCT CARDS -->
+    <div class="cards">
+      <!-- Card Chicken Burger -->
+      <div class="card">
+        <img src="/src/assets/images/gastro/gasto-item-chicken-buger.jpg" alt="chicken-burger">
+        <div class="card-description">
+          <h2>Chicken Burger</h2>
+          <p><em>We placed 70 years of delicious into this sandwich. Taste our legendary hand-battered chicken</em></p>
+          <h2 class="price">$10.00</h2>
+          <button id="Chicken Burger" value="10.00" name="Chicken Burger" class="card-btn">Order Now</button>
+        </div>
+      </div>
+      <!-- Card Chicken Wings -->
+      <div class="card">
+        <img src="/src/assets/images/gastro/gasto-item-chicken-wings.jpg" alt="chicken-wings">
+        <div class="card-description">
+          <h2>Chicken Wings</h2>
+          <p><em>Get your fill with the Texas-Sized Meal: 3PC Legs & Thighs, 2 regular sides plus a signature jalapeño
+              pepper.</em></p>
+          <h2 class="price">$9.00</h2>
+          <button id="cw-btn" value="9.00" name="Chicken Wings" class="card-btn">Order Now</button>
+        </div>
+      </div>
+      <!-- Card Chicken Wings -->
+      <div class="card">
+        <img src="/src/assets/images/gastro/gasto-item-beer.jpg" alt="beer">
+        <div class="card-description">
+          <h2>Beer</h2>
+          <p><em>Just simple and fresh beer.</em></p>
+          <h2 class="price">$2.20</h2>
+          <button id="beer-btn" value="2.20" name="Beer" class="card-btn">Order Now</button>
+        </div>
+      </div>
+      <!-- Card French fries -->
+      <div class="card">
+        <img src="/src/assets/images/gastro/gasto-item-french-fries.jpg" alt="french-ries">
+        <div class="card-description">
+          <h2>French Fries</h2>
+          <p><em>Our fries are extra-long and center-cut from Grade A potatoes. They are cooked
+              to a golden-brown crisp while remaining slightly soft in the middle. Every batch is cooked to order in our
+              premium quality Canola Oil blend.
+            </em></p>
+          <h2 class="price">$12.00</h2>
+          <button id="ff-btn" value="12.00" name="French Fries" class="card-btn">Order Now</button>
+        </div>
+      </div>
+      <!-- Card Milshake -->
+      <div class="card">
+        <img src="/src/assets/images/gastro/gasto-item-milkshake.JPG" alt="milshake">
+        <div class="card-description">
+          <h2>Milshake</h2>
+          <p><em>Our creamy Milkshakes are hand-spun the old-fashioned way each time and feature delicious. Topped with
+              whipped cream and a cherry (except when served via delivery).</em></p>
+          <h2 class="price">$1.80</h2>
+          <button id="mls-btn" value="1.80" name="Milshake" class="card-btn">Order Now</button>
+        </div>
+      </div>
+      <!-- Card Milshake -->
+      <div class="card">
+        <img src="/src/assets/images/gastro/gasto-item-fried-chicken.jpg" alt="fried-chicken">
+        <div class="card-description">
+          <h2>Fried Chicken</h2>
+          <p><em>We use premium chicken breast tenderloins to make the most tender chicken fingers possible. Our special
+              marinade tenderizes the chicken, locks in moisture and adds flavor.</em></p>
+          <h2 class="price">$8.00</h2>
+          <button id="fc-btn" value="8.00" name="Fried Chicken" class="card-btn">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card Price -->
+    <div id="bg-price" class="bg-price-cont"></div>
+    <div id="card-price" class="card-price">
+      <h2 class="title-total"><i class="fa-solid fa-credit-card"></i> ORDER TOTAL</h2>
+      <p id="desc-total" class="desc-total"><em><b>Click the name or price</b> of the pruduct to <b>remove it</b></em>
+      </p>
+      <div id="card-desc" class="card-description">
+        <!-- Product Name Container -->
+        <div id="product-name-cont">
+          <!-- Product Name's  -->
+        </div>
+        <div id="product-price-cont">
+          <!-- Product Price's -->
+        </div>
+      </div>
+      <!-- Product Total Container -->
+      <div id="product-total-cont" class="pt-cont">
+        <!-- Product Total -->
+        <h2 id="p-total"></h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section id="location" class="location">
+
+    <!-- MAP DESCRIPTION -->
+    <div class="map-desc">
+      <h1>New Los Pollos Hermanos restaurant in <b class="marker">Madrid!</b></h1>
+      <p><em>The first establishment in Spain to incorporate the new company image. The restaurants sporting the new
+          image
+          have been warmly welcomed by the public, with growth above 30% in those premises with the new Los Pollos
+          Hermanos
+          identity.
+          Los Pollos Hermanos, flagship brand of Eat Out restoration group, announced the opening its first restaurant
+          in
+          Madrid, at Puerta de Alcalá.</em></p>
+      <h2><i class="fa-solid fa-map-location-dot fa-lg"></i>
+        C. de Valenzuela, 4, 28014 Madrid, Spain</h2>
+      <a href="https://goo.gl/maps/RL4eBk9r9oFaUUt97" target="_blank" class="getdir-btn">Get
+        Directions</a>
+    </div>
+
+    <!-- MAP CONTAINER -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.3863202510491!2d-3.6891200000000013!3d40.418923199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289b8d392581%3A0x32bfed1206105c2b!2sC.%20de%20Valenzuela%2C%204%2C%2028014%20Madrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1660164611602!5m2!1sen!2sus"
+        width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <!-- PARTNERS -->
+  <section class="partners">
+    <h1 class="title">Partners</h1>
+    <h3>We are in partnership with:</h3>
+    <div class="logos-cont">
+      <img src="/src/assets/images/partners/partner-logo1.png" alt="fever-logo">
+      <img src="/src/assets/images/partners/partner-logo2.png" alt="lph-logo">
+      <img src="/src/assets/images/partners/partner-logo3.png" alt="esbtp-logo">
+      <img src="/src/assets/images/partners/partner-logo4.png" alt="probtp-logo">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-distributed">
+
+    <!-- FOOTER LEFT MENU -->
+    <div class="footer-left">
+      <div class="footer-links">
+        <a class="link-1" href="#">Home</a>
+        <a href="#">Info</a>
+        <a href="#menu">Menu</a>
+        <a href="#location">Location</a>
+      </div>
+      <p>LPH / Los pollos hermanos &copy; 2022 All Rights Reserved. Los Pollos Hermanos is an original license.
+        <a href="#">Privacy policy</a>
+      </p>
+    </div>
+
+    <!-- FOOTER RIGHT SOCIAL ICONS -->
+    <div class="footer-right">
+      <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="https://www.google.com/" target="_blank"><i class="fa-brands fa-square-google-plus"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+    </div>
+  </footer>
+
+  <!-- Do not edit below this line -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

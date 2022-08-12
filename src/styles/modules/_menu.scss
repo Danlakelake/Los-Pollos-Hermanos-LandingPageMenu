@@ -1,0 +1,225 @@
+// MENU SECTION
+.menu {
+    text-align: center;
+    padding: 2rem 3rem;
+    background-color: $dark-blue;
+
+    .title {
+        margin: 0px;
+        color: $main-white;
+        transform: skewY(-3deg);
+    }
+
+    .desc {
+        margin-bottom: 3rem;
+        color: $main-white;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px 20px;
+
+        .card {
+            background-color: $main-white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 380px;
+            height: 100%;
+            margin: auto;
+            border-radius: 5px;
+
+
+            img {
+                width: 100%;
+                max-height: 250px;
+                transition: 0.5s all ease-in-out;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                    animation: zoom-in-zoom-out 1s ease infinite;
+
+                }
+
+                @keyframes zoom-in-zoom-out {
+                    0% {
+                        transform: scale(1, 1);
+                    }
+
+                    50% {
+                        transform: scale(1.05, 1.05);
+                    }
+                }
+            }
+
+            .card-description {
+                margin: 1rem;
+                display: grid;
+                grid-template-rows: 0.5fr 1.9fr 0.5fr 0.5fr;
+
+                .price {
+                    color: $main-orange;
+                    font-size: 2rem;
+                    border: none;
+                    margin: 0.5rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                    margin-bottom: auto;
+                    color: grey;
+                }
+
+
+                .card-btn {
+                    border: none;
+                    outline: 0;
+                    padding: 12px;
+                    color: $main-black;
+                    background-color: $main-yellow;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+                    transform: skewY(-1deg);
+                    margin-bottom: 0.5rem;
+
+                    &:hover {
+                        background-color: $main-orange;
+                        transition: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+
+    // PRICE ABSOLUTE CONTAINER
+    .bg-price-cont {
+        background-color: rgba(0, 0, 0, 0.77);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        padding-top: 10%;
+        display: none;
+    }
+
+
+    .card-price {
+        background-color: $main-white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 700px;
+        max-height: 500px;
+        padding: 2rem;
+        border-radius: 5px;
+        position: fixed;
+        overflow: scroll;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        cursor: pointer;
+        display: none;
+
+        .title-total {
+            color: $main-black;
+            padding: 0.5rem;
+            border-bottom: 5px solid $main-orange;
+        }
+
+        .desc-total {
+            font-size: 15px;
+        }
+
+        .card-description {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            .name {
+                color: $main-orange;
+                font-size: 1rem;
+                border: none;
+                margin: 0.5rem;
+                cursor: pointer;
+            }
+
+            .price {
+                color: $main-black;
+                font-size: 1rem;
+                border: none;
+                margin: 0.5rem;
+                cursor: pointer;
+            }
+
+            p {
+                font-size: 1rem;
+                margin-bottom: auto;
+                color: grey;
+            }
+
+        }
+
+        .pt-cont {
+            border-top: 4px solid $main-black;
+            text-align: center;
+            display: inline-block;
+            margin-top: 1rem;
+
+            h2 {
+                margin: 0.5rem;
+            }
+        }
+    }
+}
+
+
+
+// MEDIA QUERIES
+
+@media (max-width:950px) {
+
+    .menu {
+
+        .cards {
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+}
+
+// MEDIA QUERIES
+@media (max-width:750px) {
+
+    .menu {
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        // STYLES FOR CARD TOTAL
+
+        .card-price {
+            max-width: 500px;
+            padding: 1rem;
+
+            .card-description {
+
+                .name,
+                .price {
+                    font-size: 13px;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}

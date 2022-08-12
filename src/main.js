@@ -2,7 +2,9 @@ import './main.scss';
 import menu from './menu.json';
 import './assets/fonts/Marcheile-Bold-Condensed.woff';
 import './assets/fonts/Marcheile-Bold-Condensed.woff2';
+import './js/menu';
 /* DO NOT EDIT ABOVE THIS LINE. You can start editing here. */
+import './js/fontawesome/all.min.js';
 
 /**
  * === CODE HINT ===

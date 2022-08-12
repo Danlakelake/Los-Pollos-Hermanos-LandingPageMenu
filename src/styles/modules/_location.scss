@@ -1,0 +1,98 @@
+// LOCATION
+.location {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding: 5rem 3rem;
+
+    // Map Description
+    .map-desc {
+        transform: skewY(-1deg);
+
+        .marker {
+            padding: 5px;
+            background-color: $main-orange;
+            color: $main-black;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        h2 {
+            margin-bottom: 3rem;
+        }
+
+        .getdir-btn {
+            background-color: $main-yellow;
+            border: none;
+            border-radius: 5px;
+            padding: 0.8rem 1.8rem;
+            font-size: 1.5em;
+            transition: background-color 0.5s ease-in;
+            text-decoration: none;
+            font-weight: bold;
+            color: $main-black;
+            cursor: pointer;
+
+            &:hover {
+                transition: 0.2s;
+                box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+            }
+
+        }
+    }
+
+    // Map Container
+    .map-container {
+        // transform: skewY(-1deg);
+        border: 4px dotted $light-blue;
+        border-radius: 5px;
+        overflow: hidden;
+        padding-top: 90%;
+        position: relative;
+        margin-top: 2rem;
+
+        // Map
+        iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+    }
+
+}
+
+
+// MEDIA QUERIES
+@media (max-width:1080px) {
+
+    // location container
+    .location {
+
+        // map container
+        .map-container {
+            height: 150px;
+            margin-top: 6rem;
+        }
+    }
+}
+
+@media (max-width:900px) {
+
+    // location container
+    .location {
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+
+        // map container
+        .map-container {
+            margin-top: 0;
+            height: 90px;
+        }
+    }
+}
